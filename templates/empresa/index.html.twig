@@ -1,0 +1,22 @@
+{% extends 'navegador.html.twig' %}
+
+{% block title %}Hello empresa{% endblock %}
+
+{% block body %}
+          <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="list-group col-6">
+                {% for empresa in empresas %}
+                    <a href="/empresas/{{empresa.id}}" class="list-group-item list-group-item-action">
+                        {{empresa.nom}}
+                    </a>
+                {% endfor %} 
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+{% endblock %}
